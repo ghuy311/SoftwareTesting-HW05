@@ -38,10 +38,9 @@
 | **Artifact #1**<br>Thời Gian: 13/08/2026 22:21<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Load test cho GET /api/users/me, tự động login lấy token" | Tạo ra file `test-plans/23127376_Load_20260813.jmx` và `data/users.csv` | VALID | Kịch bản cấu hình đúng số lượng threads và timer. Tự động Login và truyền Bearer Token đúng chuẩn. | |
 | **Artifact #2**<br>Thời Gian: 13/08/2026 22:21<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Stress test cho POST /api/login test lockout" | Tạo ra file `test-plans/23127376_Stress_20260813.jmx` và `data/login.csv` | VALID | CSV có chứa password sai để trigger lockout theo đúng đặc tả FR-02. | |
 | **Artifact #3**<br>Thời Gian: 13/08/2026 22:21<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Spike test cho POST /api/checkout tự lấy Token" | Tạo ra file `test-plans/23127376_Spike_20260813.jmx` và `data/checkout.csv` | VALID | Script tự động login, extract token bằng JSON Extractor và pass vào Checkout chính xác. | |
-| **Artifact #4** | | | | |
-| **Artifact #5** | | | | |
-| **Artifact #6** | | | | |
-
+| **Artifact #4**<br>Thời Gian: 13/08/2026 21:52<br>Công cụ: Antigravity<br>Prompt: "tôi không lưu được summary report / jtl is empty" | Giải thích nguyên nhân do JMeter không tự tạo thư mục `results/load` và hướng dẫn SV tạo thư mục thủ công. | VALID | Khắc phục được lỗi không lưu được log của JMeter. | |
+| **Artifact #5**<br>Thời Gian: 13/08/2026 22:15<br>Công cụ: Antigravity<br>Prompt: "đọc API_Specfication và đọc đề Hw05 rồi chọn lại cho tôi 3 API không trùng với 2 thành viên còn lại" | Tạo mới toàn bộ 3 file JMX cho `users/me`, `login`, `checkout` và 3 file CSV tương ứng. | VALID | Chọn lọc API chuẩn xác theo đặc tả, giải quyết triệt để vấn đề đụng độ API với thành viên trong nhóm. | |
+| **Artifact #6**<br>Thời Gian: 13/08/2026 22:23<br>Công cụ: Antigravity<br>Prompt: "rồi giờ bạn xoá những file không liên quan đi" | Thực thi lệnh xoá `orders.csv`, `products.csv` và các file mã nguồn nháp sinh JMX. | VALID | Dọn dẹp workspace sạch sẽ, tránh nhầm lẫn dữ liệu giữa các lần cấu hình. | |
 ---
 
 ## 4. Tổng kết Độ chính xác AI
@@ -49,19 +48,21 @@
 
 | Chỉ số | Số lượng | Tỉ lệ |
 | :--- | :---: | :---: |
-| **Tổng artifact AI sinh đã audit** | | 100\% |
-| **VALID** *(đúng, dùng nguyên)* | | % |
-| **INVALID** *(sai; loại bỏ)* | | % |
-| **INCOMPLETE** *(chấp nhận sau khi sửa)* | | % |
+| **Tổng artifact AI sinh đã audit** | 6 | 100% |
+| **VALID** *(đúng, dùng nguyên)* | 6 | 100% |
+| **INVALID** *(sai; loại bỏ)* | 0 | 0% |
+| **INCOMPLETE** *(chấp nhận sau khi sửa)* | 0 | 0% |
 
 ---
 
 ## 5. Kết luận — Khi nào nên / không nên dùng AI?
 *Viết 80–150 chữ mô tả pattern quan sát được. AI mạnh ở đâu? AI sai ở đâu? Khuyến nghị của bạn cho việc dùng AI trong loại công việc này?*
 
-................................................................................................................................................................................................
-................................................................................................................................................................................................
-................................................................................................................................................................................................
+Qua quá trình sử dụng công cụ AI (Antigravity) để thiết lập và khởi tạo các kịch bản kiểm thử hiệu năng (JMeter test plans) và dữ liệu mô phỏng (CSV files), em nhận thấy AI thể hiện sức mạnh vượt trội trong việc nhanh chóng viết các tệp cấu hình XML phức tạp và tạo sinh tập dữ liệu lớn tuân thủ đúng định dạng yêu cầu. Đặc biệt, AI có khả năng liên kết các yêu cầu nghiệp vụ (như trích xuất Token sau khi Login) để cấu hình chính xác các thành phần như JSON Extractor hay HTTP Header Manager trong JMeter.
+
+Tuy nhiên, AI vẫn phụ thuộc rất nhiều vào prompt đầu vào và ngữ cảnh. Nếu không cung cấp rõ file đặc tả API (API Specification) hoặc giới hạn về các API đã bị thành viên khác chọn, AI có thể sinh ra các kịch bản trùng lặp hoặc gọi sai endpoint. 
+
+**Khuyến nghị:** Rất nên sử dụng AI để tự động hóa việc viết boilerplate code (JMX, CSV data), giúp tiết kiệm thời gian đáng kể. Tuy nhiên, người kiểm thử vẫn phải là người định hướng chiến lược (chọn đúng API cần test, quyết định tải trọng) và review kỹ lưỡng cấu trúc HTTP Request trước khi bấm chạy thực tế.
 
 ---
 
@@ -78,8 +79,8 @@
 | **Lớp / Khoá:** |23KTPM2 / 23CLC |
 | **Môn học:** | CS423 / CSC13003 – Kiểm chứng Phần mềm |
 | **Giảng viên:** |LÂM QUANG VŨ |
-| **Ngày:** | |
-| **Chữ ký:** | |
+| **Ngày:** | 13/08/2026 |
+| **Chữ ký:** | Huy |
 
 ---
 
