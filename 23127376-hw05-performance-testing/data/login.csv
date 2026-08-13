@@ -1,0 +1,4 @@
+email,password
+test@domain.com,Password123!
+user1@domain.com,Password123!
+wrong@domain.com,wrongpass

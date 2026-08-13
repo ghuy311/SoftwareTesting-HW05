@@ -1,4 +1,4 @@
-﻿# AI Audit Report — Mẫu 5 mục cho mỗi Artifact
+# AI Audit Report — Mẫu 5 mục cho mỗi Artifact
 
 *Phụ lục bắt buộc đính kèm cho mọi bài tập có dùng AI (HW#01–HW#06, Seminar).*
 *Tài liệu được biên soạn lại từ Med Kharbach, PhD (2026) — Mẫu Chính sách Sử dụng AI cho Giáo dục Đại học.*
@@ -35,9 +35,9 @@
 
 | (1) Prompt + Công cụ | (2) Output AI | (3) Verdict | (4) Lý do (ISTQB) | (5) Bản SV sửa |
 | :--- | :--- | :--- | :--- | :--- |
-| **Artifact #1**  Thời Gian : date time <br> Công cụ:.... <br> Prompt:..."|  |  |  |  |
-| **Artifact #2** | | | | |
-| **Artifact #3** | | | | |
+| **Artifact #1**<br>Thời Gian: 13/08/2026 21:24<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Load test cho Read-heavy, kiếm 1 API khác thay vào không trùng..." | Tạo ra file `test-plans/23127376_Load_20260813.jmx` và `data/orders.csv` để test API `GET /api/orders/:id` | VALID | Kịch bản cấu hình đúng số lượng threads và timer. Dữ liệu CSV chuẩn. | |
+| **Artifact #2**<br>Thời Gian: 13/08/2026 21:24<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Stress test cho Auth-heavy POST /api/login" | Tạo ra file `test-plans/23127376_Stress_20260813.jmx` và `data/login.csv` | VALID | Tạo đúng payload JSON và đọc CSV chuẩn. | |
+| **Artifact #3**<br>Thời Gian: 13/08/2026 21:24<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Spike test cho POST /api/checkout, JMeter tự động gọi API Login lấy Token..." | Tạo ra file `test-plans/23127376_Spike_20260813.jmx` và `data/checkout.csv` sử dụng JSON Extractor lấy Token. | VALID | Script tự động login, extract token và pass vào Bearer Header của request Checkout chính xác. | |
 | **Artifact #4** | | | | |
 | **Artifact #5** | | | | |
 | **Artifact #6** | | | | |
