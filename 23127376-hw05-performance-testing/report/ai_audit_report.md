@@ -13,7 +13,7 @@
 | **Họ tên sinh viên (in hoa):** |HỒ GIA HUY |
 | **MSSV:** | 23127376 |
 | **Lớp / Khoá:** |23KTPM2 / 23CLC |
-| **Mã bài tập (ví dụ HW#00, HW#02):** |HW02 |
+| **Mã bài tập:** |HW05 |
 | **Ngày làm bài:** |13/08/2026 |
 | **Công cụ AI đã dùng:** | Antigravity |
 | **Công cụ AI đã dùng:** | `[X] Có`  `[] Không` |
@@ -35,9 +35,9 @@
 
 | (1) Prompt + Công cụ | (2) Output AI | (3) Verdict | (4) Lý do (ISTQB) | (5) Bản SV sửa |
 | :--- | :--- | :--- | :--- | :--- |
-| **Artifact #1**<br>Thời Gian: 13/08/2026 21:24<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Load test cho Read-heavy, kiếm 1 API khác thay vào không trùng..." | Tạo ra file `test-plans/23127376_Load_20260813.jmx` và `data/orders.csv` để test API `GET /api/orders/:id` | VALID | Kịch bản cấu hình đúng số lượng threads và timer. Dữ liệu CSV chuẩn. | |
-| **Artifact #2**<br>Thời Gian: 13/08/2026 21:24<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Stress test cho Auth-heavy POST /api/login" | Tạo ra file `test-plans/23127376_Stress_20260813.jmx` và `data/login.csv` | VALID | Tạo đúng payload JSON và đọc CSV chuẩn. | |
-| **Artifact #3**<br>Thời Gian: 13/08/2026 21:24<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Spike test cho POST /api/checkout, JMeter tự động gọi API Login lấy Token..." | Tạo ra file `test-plans/23127376_Spike_20260813.jmx` và `data/checkout.csv` sử dụng JSON Extractor lấy Token. | VALID | Script tự động login, extract token và pass vào Bearer Header của request Checkout chính xác. | |
+| **Artifact #1**<br>Thời Gian: 13/08/2026 22:21<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Load test cho GET /api/users/me, tự động login lấy token" | Tạo ra file `test-plans/23127376_Load_20260813.jmx` và `data/users.csv` | VALID | Kịch bản cấu hình đúng số lượng threads và timer. Tự động Login và truyền Bearer Token đúng chuẩn. | |
+| **Artifact #2**<br>Thời Gian: 13/08/2026 22:21<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Stress test cho POST /api/login test lockout" | Tạo ra file `test-plans/23127376_Stress_20260813.jmx` và `data/login.csv` | VALID | CSV có chứa password sai để trigger lockout theo đúng đặc tả FR-02. | |
+| **Artifact #3**<br>Thời Gian: 13/08/2026 22:21<br>Công cụ: Antigravity<br>Prompt: "Tạo kịch bản Spike test cho POST /api/checkout tự lấy Token" | Tạo ra file `test-plans/23127376_Spike_20260813.jmx` và `data/checkout.csv` | VALID | Script tự động login, extract token bằng JSON Extractor và pass vào Checkout chính xác. | |
 | **Artifact #4** | | | | |
 | **Artifact #5** | | | | |
 | **Artifact #6** | | | | |

@@ -1,3 +1,4 @@
 email,password,total_amount,shipping_address
-test@domain.com,Password123!,150000,123 Nguyen Hue
-user1@domain.com,Password123!,300000,456 Le Loi
+test@eshop.com,Test1234!,200000,123 Le Loi TP.HCM
+test@eshop.com,Test1234!,300000,456 Nguyen Trai TP.HCM
+test@eshop.com,Test1234!,150000,789 Dien Bien Phu TP.HCM
