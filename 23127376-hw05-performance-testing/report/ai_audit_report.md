@@ -45,6 +45,7 @@
 | **Artifact #8**<br>Thời Gian: 16/08/2026<br>Công cụ: Antigravity<br>Prompt: "sao tôi test trên frontend lại không bị" | Gọi Browser agent truy cập `localhost:5174`, phát hiện lỗi Frontend che giấu thông báo 403 Forbidden. | VALID | Phân tích sâu nguyên nhân khác biệt giữa log Backend và giao diện người dùng. | |
 | **Artifact #9**<br>Thời Gian: 16/08/2026<br>Công cụ: Antigravity<br>Prompt: "trong folder analysis có 2 file hãy sử dụng các từ ngữ phổ thông mà không nặng về thuật ngữ" | Viết lại file `ai_analysis_raw.md` và `misinterpretation_review.md` với ngôn từ dễ hiểu cho sinh viên. | VALID | Điều chỉnh văn phong phù hợp với yêu cầu báo cáo học thuật sinh viên. | |
 | **Artifact #10**<br>Thời Gian: 16/08/2026<br>Công cụ: Antigravity<br>Prompt: "bản này cũng không hay không rõ flow phải CI, rồi run test rồi ...vv chứ" | Cập nhật file `continuous_perf_testing.md`, vẽ biểu đồ Mermaid chuẩn luồng CI/CD công nghiệp. | VALID | Thiết kế luồng CI/CD chuyên nghiệp, bổ sung Quality Gate và cảnh báo. | |
+| **Artifact #11**<br>Thời Gian: 16/08/2026<br>Công cụ: Antigravity<br>Prompt: "tạo file skill agent nhớ là phải đọc repo SUT gốc" | Khởi tạo thư mục `.agents/skills/eshop-performance-tester/` và viết `SKILL.md` định nghĩa workflow. | VALID | Quy chuẩn hóa các bước thực hành Performance Test thành Agent Skill có thể tái sử dụng. | |
 ---
 
 ## 4. Tổng kết Độ chính xác AI
@@ -52,8 +53,8 @@
 
 | Chỉ số | Số lượng | Tỉ lệ |
 | :--- | :---: | :---: |
-| **Tổng artifact AI sinh đã audit** | 10 | 100% |
-| **VALID** *(đúng, dùng nguyên)* | 10 | 100% |
+| **Tổng artifact AI sinh đã audit** | 11 | 100% |
+| **VALID** *(đúng, dùng nguyên)* | 11 | 100% |
 | **INVALID** *(sai; loại bỏ)* | 0 | 0% |
 | **INCOMPLETE** *(chấp nhận sau khi sửa)* | 0 | 0% |
 
