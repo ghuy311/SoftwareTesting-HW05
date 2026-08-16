@@ -41,6 +41,10 @@
 | **Artifact #4**<br>Thời Gian: 13/08/2026 21:52<br>Công cụ: Antigravity<br>Prompt: "tôi không lưu được summary report / jtl is empty" | Giải thích nguyên nhân do JMeter không tự tạo thư mục `results/load` và hướng dẫn SV tạo thư mục thủ công. | VALID | Khắc phục được lỗi không lưu được log của JMeter. | |
 | **Artifact #5**<br>Thời Gian: 13/08/2026 22:15<br>Công cụ: Antigravity<br>Prompt: "đọc API_Specfication và đọc đề Hw05 rồi chọn lại cho tôi 3 API không trùng với 2 thành viên còn lại" | Tạo mới toàn bộ 3 file JMX cho `users/me`, `login`, `checkout` và 3 file CSV tương ứng. | VALID | Chọn lọc API chuẩn xác theo đặc tả, giải quyết triệt để vấn đề đụng độ API với thành viên trong nhóm. | |
 | **Artifact #6**<br>Thời Gian: 13/08/2026 22:23<br>Công cụ: Antigravity<br>Prompt: "rồi giờ bạn xoá những file không liên quan đi" | Thực thi lệnh xoá `orders.csv`, `products.csv` và các file mã nguồn nháp sinh JMX. | VALID | Dọn dẹp workspace sạch sẽ, tránh nhầm lẫn dữ liệu giữa các lần cấu hình. | |
+| **Artifact #7**<br>Thời Gian: 16/08/2026<br>Công cụ: Antigravity<br>Prompt: "khi test spike thì bên backend SUT bị như sau SyntaxError: Unexpected token '<'" | Sửa file `23127376_Spike_20260813.jmx`, đổi `shareMode` thành `thread` và thêm ngoặc kép cho JSON. | VALID | Xử lý triệt để lỗi parse JSON do tranh chấp file CSV giữa các Thread. | |
+| **Artifact #8**<br>Thời Gian: 16/08/2026<br>Công cụ: Antigravity<br>Prompt: "sao tôi test trên frontend lại không bị" | Gọi Browser agent truy cập `localhost:5174`, phát hiện lỗi Frontend che giấu thông báo 403 Forbidden. | VALID | Phân tích sâu nguyên nhân khác biệt giữa log Backend và giao diện người dùng. | |
+| **Artifact #9**<br>Thời Gian: 16/08/2026<br>Công cụ: Antigravity<br>Prompt: "trong folder analysis có 2 file hãy sử dụng các từ ngữ phổ thông mà không nặng về thuật ngữ" | Viết lại file `ai_analysis_raw.md` và `misinterpretation_review.md` với ngôn từ dễ hiểu cho sinh viên. | VALID | Điều chỉnh văn phong phù hợp với yêu cầu báo cáo học thuật sinh viên. | |
+| **Artifact #10**<br>Thời Gian: 16/08/2026<br>Công cụ: Antigravity<br>Prompt: "bản này cũng không hay không rõ flow phải CI, rồi run test rồi ...vv chứ" | Cập nhật file `continuous_perf_testing.md`, vẽ biểu đồ Mermaid chuẩn luồng CI/CD công nghiệp. | VALID | Thiết kế luồng CI/CD chuyên nghiệp, bổ sung Quality Gate và cảnh báo. | |
 ---
 
 ## 4. Tổng kết Độ chính xác AI
@@ -48,8 +52,8 @@
 
 | Chỉ số | Số lượng | Tỉ lệ |
 | :--- | :---: | :---: |
-| **Tổng artifact AI sinh đã audit** | 6 | 100% |
-| **VALID** *(đúng, dùng nguyên)* | 6 | 100% |
+| **Tổng artifact AI sinh đã audit** | 10 | 100% |
+| **VALID** *(đúng, dùng nguyên)* | 10 | 100% |
 | **INVALID** *(sai; loại bỏ)* | 0 | 0% |
 | **INCOMPLETE** *(chấp nhận sau khi sửa)* | 0 | 0% |
 

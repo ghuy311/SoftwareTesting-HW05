@@ -1,1 +1,7 @@
-﻿
+# AI Critique (Đánh giá AI)
+
+Trong quá trình làm đồ án kiểm thử hiệu năng này, em đã sử dụng công cụ AI (Antigravity IDE) để hỗ trợ viết kịch bản JMeter và báo cáo. Phải công nhận là AI giúp em tiết kiệm được rất nhiều thời gian thiết lập cấu trúc file và tạo dữ liệu giả. Tuy nhiên, AI không hề hoàn hảo và vẫn mắc phải một số lỗi khá ngớ ngẩn do không hiểu rõ hệ thống thực tế.
+
+Cụ thể, lúc đầu nhờ tạo danh sách tài khoản (`users.csv`) để chạy Stress Test, AI lại tạo ra một danh sách chứa toàn các tài khoản trùng lặp giống hệt nhau. Điều này xảy ra do AI tự ý dùng các khuôn mẫu chung chung trên mạng thay vì tự giác đối chiếu với cơ sở dữ liệu thật của dự án. Hay như lúc cấu hình Spike Test thanh toán, AI thiết lập thiếu thông số chia sẻ file trong JMeter, dẫn đến việc nhiều luồng (Thread) giành nhau đọc file CSV và làm sập Backend với lỗi `<EOF>`. Đáng nói nhất là lúc đọc file log (.jtl) để phân tích, AI tự nhiên suy diễn ra con số lỗi 2% ở kịch bản Tải nhẹ dù thực tế là 0%. Nó còn đề xuất gắn thêm một hệ thống Redis cực kỳ rườm rà vào một dự án đồ án nhỏ chỉ dùng SQLite.
+
+Từ những lần AI làm sai đó, em rút ra được một nguyên tắc cốt lõi: **"Dùng AI thì nhanh, nhưng không được tin AI 100%"**. Không bao giờ được lấy nguyên xi cấu hình hay báo cáo của AI mà không kiểm chứng lại. Người kỹ sư kiểm thử bắt buộc phải có tư duy phản biện (critical thinking), phải dùng dữ liệu thực tế (raw logs) để đối chứng và phải hiểu rõ đặc tả dự án. AI chỉ là trợ lý giúp tăng tốc độ làm việc, còn trách nhiệm thẩm định chất lượng cuối cùng luôn thuộc về con người.
