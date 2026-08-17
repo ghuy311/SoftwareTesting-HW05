@@ -24,5 +24,3 @@
 | **5** | Task 3 — Continuous Performance Testing proposal (G9.6) | 10 | 10 |
 | **6** | Agent Skills | 10 | 10 |
 |  | **Total** | **100** | **100/100** |
-
-*(Ghi chú: Đã hoàn thành toàn bộ hạng mục bao gồm cả Agent Skill để tự động hóa EShop Perf Testing).*
